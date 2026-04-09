@@ -42,5 +42,6 @@
       "it": true
     }
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@10.33.0",
+  "repository": "https://github.com/beyonk/pino-logtail.git"
 }
