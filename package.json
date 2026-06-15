@@ -43,5 +43,12 @@
     }
   },
   "packageManager": "pnpm@10.33.0",
-  "repository": "https://github.com/beyonk/pino-logtail.git"
+  "repository": "https://github.com/beyonk/pino-logtail.git",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "25.9.0",
+      "onFail": "error"
+    }
+  }
 }
