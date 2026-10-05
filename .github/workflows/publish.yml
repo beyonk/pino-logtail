@@ -41,7 +41,10 @@ jobs:
         run: |
           corepack enable
           pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
+          pnpm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.GITHUB_TOKEN }}"
           pnpm i
 
       - name: publish
-        run: pnpm publish --no-git-checks --access public
+        run: |
+          pnpm publish --registry https://npm.pkg.github.com --no-git-checks
+          pnpm publish --registry https://registry.npmjs.org --no-git-checks --access public
