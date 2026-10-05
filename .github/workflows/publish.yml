@@ -10,8 +10,10 @@ on:
     branches:
       - '*'
 
-env:
-  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+permissions:
+  contents: read
+  id-token: write
+  packages: write
 
 jobs:
   test:
@@ -40,7 +42,6 @@ jobs:
       - name: set up node and pnpm
         run: |
           corepack enable
-          pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
           pnpm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.GITHUB_TOKEN }}"
           pnpm i
 
