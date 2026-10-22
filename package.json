@@ -12,6 +12,12 @@
   "bin": {
     "pino-logtail": "index.js"
   },
+  "files": [
+    "index.js",
+    "config.js",
+    "logger.js",
+    "transform.js"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -25,22 +31,12 @@
     "pino": ">= 6"
   },
   "devDependencies": {
-    "@beyonk/eslint-config": "^5.0.2",
+    "@beyonk/eslint-config": "^10.1.1",
     "@hapi/code": "^8.0.3",
-    "eslint": "^7.19.0",
+    "eslint": "^9.39.5",
     "mocha": "^9.0.3",
     "pino": "*",
     "sinon": "^19.0.2"
-  },
-  "eslintConfig": {
-    "extends": "@beyonk",
-    "globals": {
-      "describe": true,
-      "context": true,
-      "beforeEach": true,
-      "afterEach": true,
-      "it": true
-    }
   },
   "packageManager": "pnpm@12.9.1",
   "repository": "https://github.com/beyonk/pino-logtail.git",
